@@ -1,0 +1,68 @@
+.heatmap_container_svg{
+  height: 1200;
+  width: 600;
+  top: 0;
+  left: 0;
+  position: relative;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: white;
+  padding-top: 50px;
+}
+
+.tooltip-heatmap {
+  background-color: black;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  border: 2px solid;
+  border-color: black;
+  padding: 10px;
+  position: absolute;
+  color: white;
+}
+
+.duration-slider{
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 300px;
+  float: right;
+  padding: 10px;
+  margin-right: 280px;
+  margin-top: 10px;
+}
+.warning{
+  font-family: sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+}
+.heatmap-legend{
+  float: left;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+.header{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.label{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.heatmap-text {
+  display: block;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: small;
+}
+

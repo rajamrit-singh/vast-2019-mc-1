@@ -1,0 +1,29 @@
+#tooltip_parallelplot{
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid;
+    border-color: black;
+    padding: 10px;
+    position: absolute;
+    color: white;
+}
+
+.parallel-plot-container-div {
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background:white;
+}
+
+.parallel-plot-text {
+    display: block;
+    font-size: small;
+}
+
+html body div#root div.App div.parallelplot-scatterplot-container-div div.parallel-plot-container-div svg g g.axis text.title {
+    font-weight: bold;
+}

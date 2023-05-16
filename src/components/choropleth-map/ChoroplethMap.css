@@ -1,0 +1,32 @@
+.choropleth-container-svg {
+    height: 1000;
+    width: 500;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.selected-region {
+    stroke: 'black';
+    stroke-width: 5px;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.choropleth-container-div {
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    background: white;
+}
+
+.line-chart-path {
+    transform: scale(0.2);
+}
+
+.map-info-text {
+    display: block;
+    font-size: small;
+}
