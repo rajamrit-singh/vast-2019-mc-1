@@ -490,7 +490,7 @@ const ScatterPlot = ({ data }) => {
     // create the y axis
     const yAxis = d3.axisLeft(yScale);
 
-    const y_axis_label = svg
+    svg
       .append("text")
       .classed("label", true)
       .classed("axis-label", true)
@@ -501,7 +501,7 @@ const ScatterPlot = ({ data }) => {
       .attr("text-anchor", "middle")
       .text("Magnitude");
 
-    const x_axis_label = svg
+    svg
       .append("text")
       .classed("label", true)
       .classed("axis-label", true)

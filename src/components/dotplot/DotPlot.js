@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {select, selectAll, axisBottom, axisLeft, group, max, scaleBand, scaleTime, scaleLinear, scaleOrdinal} from "d3";
+import {select, selectAll, axisBottom, axisLeft, max, scaleTime, scaleLinear, scaleOrdinal} from "d3";
 import { useSelector } from 'react-redux';
 import { filterDataByDateTime} from '../../utils/dataProcessUtil';
 import "./DotPlot.css";
@@ -42,9 +42,9 @@ function drawDotPlot() {
     var previousData = null;
     
     for(const row of inputData) {
-        
+        var locationWiseRecords = [];
+
         if(previousData === null) {
-            var locationWiseRecords = [];
             for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
                 locationWiseRecords.push(0);
             }
@@ -58,7 +58,6 @@ function drawDotPlot() {
         else if(row.time.getTime() !== previousData.time.getTime()) {
             dotPlotTimeWiseData.push(previousData);
 
-            var locationWiseRecords = [];
             for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
                 locationWiseRecords.push(0);
             }

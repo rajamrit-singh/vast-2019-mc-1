@@ -48,7 +48,7 @@ export const getMeanforTimeInterval = (data, locations=[], start_datetime, end_d
     };
 
     var locationFilter = []
-    if (locations.length==0)
+    if (locations.length === 0)
         locationFilter = data
     else
         locationFilter = data.filter((d)=> locations.includes(d.location))
@@ -74,7 +74,7 @@ export const getMeanforTimeInterval = (data, locations=[], start_datetime, end_d
         const count = { total: 0 };
         value.forEach(function (d) {
             // console.log(d.location);
-            if(locations.length==0 ||  locations.includes(d.location)){
+            if(locations.length === 0 ||  locations.includes(d.location)){
                 for (const key in sum) {
                     if (d[key] !== null) {
                         sum[key] += d[key];

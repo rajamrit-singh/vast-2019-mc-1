@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import * as d3 from "d3";
-import { keys } from "d3-collection";
 import {
   filterDataByDateTime,
   groupDataByLocation,

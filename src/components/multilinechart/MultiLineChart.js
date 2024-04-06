@@ -93,7 +93,7 @@ const MultiLineChart = ({ data }) => {
     .call(d3.axisLeft(y));
 
     // Axis Labels Section
-    const y_label = svg.append("text")
+    svg.append("text")
       .classed("label", true)
       .attr("transform", "rotate(-90)")
       .attr("y", -40)
@@ -102,7 +102,7 @@ const MultiLineChart = ({ data }) => {
       .style("text-anchor", "middle")
       .text("Magnitude");
 
-    const x_label = svg
+    svg
       .append("text")
       .classed("label", true)
       .classed("axis-label", true)

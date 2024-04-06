@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import "./App.css";
 import ScatterPlot from "./components/scatterplot/ScatterPlot";
 import ParallelPlot from "./components/parallelplot/ParallelPlot";
-import { testAction } from "./store/actionCreators";
 import { getData } from "./utils/dataUtil";
 import ChoroplethMap from './components/choropleth-map/ChoroplethMap';
 import MultiLineChart from './components/multilinechart/MultiLineChart';
@@ -13,7 +11,6 @@ import LoadingPage from "./components/loading-page/LoadingPage";
 import { Container, Navbar } from "react-bootstrap";
 
 function App() {
-  const dispatch = useDispatch();
   const [challengeData, setChallengeData] = useState([]);
 
   useEffect(() => {

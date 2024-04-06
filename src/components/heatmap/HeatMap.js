@@ -22,7 +22,7 @@ var tooltip = undefined;
 function wrangleData(data, selectedRegions, currentValue, start_datetime, end_datetime) {
   var filteredData = []
   var avgData = []
-  if(selectedRegions.length ==0) {
+  if(selectedRegions.length === 0) {
     filteredData = data.filter(d => {
       let time = d['time']
       return (time.getTime() >= start_datetime.getTime() && time.getTime() <= end_datetime.getTime());
@@ -181,7 +181,7 @@ const HeatMap = ({ data }) => {
       tooltip.style("visibility", "visible");
       tooltip.transition().style("opacity", 0.9);
       let k = new Date(d['key'])
-      if(d.value === -1 && d.count==0) {
+      if(d.value === -1 && d.count === 0) {
         tooltip
         .html("No REPORTS for " + d['property'] + " on " + k.toLocaleTimeString('en-US', options) )
         .style("left", event.pageX + 10 + "px")

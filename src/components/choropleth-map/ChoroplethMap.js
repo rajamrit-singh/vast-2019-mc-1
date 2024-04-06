@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { select, geoMercator, geoPath, scaleSequential, interpolateYlOrRd, nest } from 'd3';
+import React from 'react';
+import { geoMercator, geoPath, scaleSequential, interpolateYlOrRd } from 'd3';
 import { geoJson } from '../../map-data/StHimark_geo';
 import './ChoroplethMap.css';
 import { AttributeDropdown } from '../attribute-dropdown/AttributeDropdown';
@@ -8,8 +8,6 @@ import { filterDataByDateTime, getMeanForAttribute, groupDataByLocation } from '
 import { ColorLegend } from './ColorLegend';
 import { setSelectedRegions } from '../../store/actionCreators';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { transform } from 'topojson';
-
 
 const ChoroplethMap = ({ data }) => {
     const dispatch = useDispatch();
