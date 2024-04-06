@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-     - name: Build React app
+      - name: Build React app
         run: npm run build
 
       - name: Deploy to Netlify
@@ -31,4 +31,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} 
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}  
         with:
-          args: deploy --dir=build --prod   
+          args: deploy --dir=build --prod 
