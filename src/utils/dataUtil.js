@@ -1,10 +1,9 @@
 import * as d3 from 'd3';
 import challengeData from '../data/sorted_file.csv';
 
-
 export async function getData() {
     return await d3.csv(challengeData).then(data=>{
-        data.map(d=>{
+        return data.map(d=>{
             d.medical= d.medical===""?null:+d.medical
             d.location= d.location===""?null:+d.location
             d.power= d.power===""?null:+d.power
@@ -14,8 +13,10 @@ export async function getData() {
             d.buildings= d.buildings===""?null:+d.buildings
             d.time = new Date(d.time)
             d.average_row = d.average
+            return d;
         })
+    }).then(data => {
         data.sort((a, b) => a.time.getTime() - b.time.getTime());
-        return data
+        return data;
     });
 }
