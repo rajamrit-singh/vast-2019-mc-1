@@ -76,7 +76,7 @@ export const getMeanforTimeInterval = (data, locations=[], start_datetime, end_d
             // console.log(d.location);
             if(locations.length==0 ||  locations.includes(d.location)){
                 for (const key in sum) {
-                    if (d[key] != null) {
+                    if (d[key] !== null) {
                         sum[key] += d[key];
                         count[key] = (count[key] || 0) + 1;
                     }

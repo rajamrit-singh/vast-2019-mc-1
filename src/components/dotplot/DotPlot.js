@@ -102,7 +102,7 @@ function drawDotPlot() {
                     continue;
                 
                 const numberOfRecords = locationRecordsInCurrentTime[index];
-                if(numberOfRecords != 0) {
+                if(numberOfRecords !== 0) {
                     var currentData = {
                         time : currentTime,
                         location : index + 1,
@@ -205,10 +205,10 @@ function drawDotPlot() {
             tooltipDiv.style("visibility", "visible");
             tooltipDiv.style("opacity", 1);
 
-            if(data.totalReports != undefined) {
+            if(data.totalReports !== undefined) {
                 let locWiseReps = "";
                 for(let locIndex = 0 ; locIndex < NUMBER_OF_LOCATIONS ; locIndex++) {
-                    if(data.locationRecords[locIndex] != 0) {
+                    if(data.locationRecords[locIndex] !== 0) {
                         if(locWiseReps.length > 0) {
                             locWiseReps = locWiseReps.concat(", " + neighborhoods[locIndex + 1] + " : " + data.locationRecords[locIndex]);
                         }

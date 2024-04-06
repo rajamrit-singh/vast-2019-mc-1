@@ -62,7 +62,7 @@ function wrangleData(data, selectedRegions, currentValue, start_datetime, end_da
   Object.keys(groupedData).map((v)=>{
       return Object.keys(ATTRIBUTE_LIST).map((key)=> {
         let vals = groupedData[v].map((d)=> {return  d[key]}).filter((d) => {return d!=null})
-        if(vals.length != 0){
+        if(vals.length !== 0){
           avgData.push({'key': v,'property':ATTRIBUTE_LIST[key], 'value': mode(vals), 'count': vals.length})
         } else {
           avgData.push({'key': v,'property':ATTRIBUTE_LIST[key], 'value': -1, 'count':0})

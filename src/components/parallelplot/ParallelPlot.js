@@ -114,27 +114,27 @@ const ParallelPlot = ({ data }) => {
 
     for (var i = 0; i < value.length; i++) {
       var array = {};
-      if (value[i].sewer_and_water != null) {
+      if (value[i].sewer_and_water !== null) {
         sumSewer += value[i].sewer_and_water;
         countSewer += 1;
       }
-      if (value[i].roads_and_bridges != null) {
+      if (value[i].roads_and_bridges !== null) {
         sumRoads += value[i].roads_and_bridges;
         countRoads += 1;
       }
-      if (value[i].power != null) {
+      if (value[i].power !== null) {
         sumPower += value[i].power;
         countPower += 1;
       }
-      if (value[i].medical != null) {
+      if (value[i].medical !== null) {
         sumMed += value[i].medical;
         countMed += 1;
       }
-      if (value[i].buildings != null) {
+      if (value[i].buildings !== null) {
         sumBuild += value[i].buildings;
         countBuild += 1;
       }
-      if (value[i].shake_intensity != null) {
+      if (value[i].shake_intensity !== null) {
         sumShake += value[i].shake_intensity;
         countShake += 1;
       }

@@ -182,7 +182,7 @@ function drawScatterPlot(
     })
     .on("mouseout", function (e, d) {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -224,7 +224,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -262,7 +262,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -301,7 +301,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -339,7 +339,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -377,7 +377,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
@@ -416,7 +416,7 @@ function createLegends(colorScale, parentSvg, margin) {
     })
     .on("mouseout", function () {
       attrs.forEach((attr) => {
-        if (attr != "location") {
+        if (attr !== "location") {
           d3.selectAll("." + attr)
             .transition()
             .style("fill", colorScale(attr))
