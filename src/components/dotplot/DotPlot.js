@@ -43,7 +43,7 @@ function drawDotPlot() {
     
     for(const row of inputData) {
         
-        if(previousData == null) {
+        if(previousData === null) {
             var locationWiseRecords = [];
             for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
                 locationWiseRecords.push(0);
@@ -81,7 +81,7 @@ function drawDotPlot() {
     margin = {top : 4, bottom : 25, left : 55, right : 25};
 
     for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
-        if(locationsSelected[index] == 1) {
+        if(locationsSelected[index] === 1) {
             noLocationsSelected = false;
             break;
         }
@@ -98,7 +98,7 @@ function drawDotPlot() {
             const locationRecordsInCurrentTime = recordsInCurrentTime.locationRecords;
             for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
 
-                if(locationsSelected[index] == 0)
+                if(locationsSelected[index] === 0)
                     continue;
                 
                 const numberOfRecords = locationRecordsInCurrentTime[index];
@@ -257,7 +257,7 @@ function drawDotPlot() {
         var neighborhoodNames = [];
         var colorRange = [];
         for(let index = 0 ; index < NUMBER_OF_LOCATIONS ; index++) {
-            if(locationsSelected[index] == 1) {
+            if(locationsSelected[index] === 1) {
                 neighborhoodNames.push(neighborhoods[index + 1]);
                 colorRange.push(color[index]);
             }
@@ -325,7 +325,7 @@ const DotPlot = ({data}) => {
     const dataByDateTime = filterDataByDateTime(data, start_datetime, end_datetime);
 
     useEffect(() => {
-      if(tooltipDiv == undefined) {
+      if(tooltipDiv === undefined) {
         tooltipDiv = 
         select('body')
         .append("div")
@@ -342,11 +342,11 @@ const DotPlot = ({data}) => {
             .style("color", "white");
       }
 
-      if(yThresholdInput == undefined) {
+      if(yThresholdInput === undefined) {
         yThresholdInput = select("#yThreshold");
       }
 
-      if(dataByDateTime== null || dataByDateTime.length == 0) {
+      if(dataByDateTime== null || dataByDateTime.length === 0) {
         return;
       }
 

@@ -186,7 +186,7 @@ const MultiLineChart = ({ data }) => {
         .attr("width", 19)
         .attr("height", 19)
         .attr("fill", function (){
-          if (selectedAttribute == "average")
+          if (selectedAttribute === "average")
             return colorScale("average_row");
           return colorScale(selectedAttribute)
         });
@@ -220,7 +220,7 @@ const MultiLineChart = ({ data }) => {
           {
             return "Medical" 
           }
-          else if (d == "buildings")
+          else if (d === "buildings")
           {
             return "Buildings"
           }

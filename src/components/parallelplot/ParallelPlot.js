@@ -79,12 +79,12 @@ const ParallelPlot = ({ data }) => {
   const end_datetime = useSelector((state) => state.entities.end_datetime);
   var dataByDateTime = filterDataByDateTime(data, start_datetime, end_datetime);
 
-  if (dataByDateTime == {}) {
+  if (dataByDateTime === {}) {
     dataByDateTime = data;
   }
 
   var locationFilter = [];
-  if (locations.length == 0) locationFilter = dataByDateTime;
+  if (locations.length === 0) locationFilter = dataByDateTime;
   else
     locationFilter = dataByDateTime.filter((d) =>
       locations.includes(d.location)
@@ -290,9 +290,9 @@ const ParallelPlot = ({ data }) => {
     //Box plot
     var locs = d3.map(quantile_data, (d) => d.location);
     locs.forEach((loc) => {
-      var quantile_specific = quantile_data.filter((d) => d.location == loc);
+      var quantile_specific = quantile_data.filter((d) => d.location === loc);
       for (var i in quantile_specific[0]) {
-        if (i == "location") continue;
+        if (i === "location") continue;
 
         var max = quantile_specific[0][i].max;
         var min = quantile_specific[0][i].min;

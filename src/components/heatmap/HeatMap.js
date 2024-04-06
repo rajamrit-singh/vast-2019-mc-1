@@ -181,7 +181,7 @@ const HeatMap = ({ data }) => {
       tooltip.style("visibility", "visible");
       tooltip.transition().style("opacity", 0.9);
       let k = new Date(d['key'])
-      if(d.value == -1 && d.count==0) {
+      if(d.value === -1 && d.count==0) {
         tooltip
         .html("No REPORTS for " + d['property'] + " on " + k.toLocaleTimeString('en-US', options) )
         .style("left", event.pageX + 10 + "px")

@@ -41,7 +41,7 @@ const ChoroplethMap = ({ data }) => {
         if(selectedAttribute === null) {
             return
         }
-        if(avgValue == undefined) {
+        if(avgValue === undefined) {
             textToDisplay = 'No Data'
         } else {
             textToDisplay = <div><strong>Average Magnitude:</strong> {avgValue.toFixed(2)}</div>
