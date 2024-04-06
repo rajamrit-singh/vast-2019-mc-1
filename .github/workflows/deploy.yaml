@@ -7,23 +7,22 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      CI: false
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Check out the code
+        uses: actions/checkout@v3 
 
       - name: Install Node.js 
         uses: actions/setup-node@v3
         with:
-          node-version: 20.12.1  # Adjust the Node version as needed
+          node-version: 20.12.1 
 
       - name: Install dependencies
         run: npm install
 
-      - name: Set CI to false
-        run: export CI=false
-
-      - name: Build React app
+     - name: Build React app
         run: npm run build
 
       - name: Deploy to Netlify
