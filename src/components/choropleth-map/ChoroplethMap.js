@@ -83,7 +83,7 @@ const ChoroplethMap = ({ data }) => {
                 <ColorLegend />
             </svg>
             <div className="map-info-text">
-            <p>The choropleth map shows the average magnitude for various attributes. Please select the attribute to see the changes. Please select the areas on the map to see stats related to that area in other graphs</p>
+            <p>The choropleth map shows the average magnitude for various attributes. Please select the attribute to see the changes and the areas on the map to see stats related to that area in other graphs</p>
         </div>
         </div>
     );
