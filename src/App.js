@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <Navbar bg="primary" variant="dark" className="navbar-title justify-content-center"> 
         <Container className="container-nav">
-          <Navbar.Brand><h1>St. Himark Disaster Management Portal</h1></Navbar.Brand>
+          <Navbar.Brand><h1>Disaster Management Dashboard</h1></Navbar.Brand>
         </Container>
       </Navbar>
       <div className="multiline-container-div">
