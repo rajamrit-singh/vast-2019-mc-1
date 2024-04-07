@@ -23,7 +23,18 @@ jobs:
       - name: Build React app
         run: npm run build
         env:  # Add the CI variable specifically for this step 
-          CI: false   
+          CI: false
 
-      - name: Trigger Netlify Build
-        run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/6612247851a9b46d7e97f457
+      - name: Check if token exists
+        run: echo ${{ secrets.NETLIFY_AUTH_TOKEN }} 
+
+      - name: Check if site id exists
+        run: echo ${{ secrets.NETLIFY_SITE_ID }}  
+      
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master  
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} 
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}  
+        with:
+          args: deploy --dir=build --prod 
